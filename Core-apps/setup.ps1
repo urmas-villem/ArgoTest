@@ -37,3 +37,5 @@ Write-Host "Logged into ArgoCD." -ForegroundColor Green
 
 argocd account update-password --current-password $initial_password --new-password password
 Write-Host "ArgoCD password updated to 'user:admin pw:password'" -ForegroundColor Green
+
+kubectl apply -n argocd -f https://raw.githubusercontent.com/urmas-villem/ArgoTest/refs/heads/main/Core-apps/deploy/dev-cluster/argoapps/apps-management.yaml
