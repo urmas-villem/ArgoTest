@@ -14,7 +14,7 @@ spec:
       recurse: true
     path: Core-apps/deploy/dev-cluster/yaml/alertmanager
     repoURL: https://github.com/urmas-villem/ArgoTest.git
-    targetRevision: master
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
