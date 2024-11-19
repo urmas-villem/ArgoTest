@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: logstash
+  namespace: argocd
+spec:
+  destination:
+    namespace: monitoring
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      jsonnet: {}
+      recurse: true
+    path: Core-apps/deploy/dev-cluster/yaml/logstash
+    repoURL: https://github.com/urmas-villem/ArgoTest.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
