@@ -5,15 +5,15 @@ metadata:
   namespace: argocd
 spec:
   project: default
-    source:
-      repoURL: git@github.com:urmas-villem/ArgoTest.git
-      targetRevision: HEAD
-      path: Core-apps/deploy/dev-cluster/argoapps
-      directory:
-        recurse: true
-    destination:
-      server: https://kubernetes.default.svc
-      namespace: default
-    syncPolicy:
-      automated:
-        prune: true
+  source:
+    repoURL: git@github.com:urmas-villem/ArgoTest.git
+    targetRevision: HEAD
+    path: Core-apps/deploy/dev-cluster/argoapps
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
